@@ -1,7 +1,10 @@
 import React from 'react';
 import { Typography, Box, Grid, TableContainer, Table, TableBody, TableCell, TableHead, TableRow, Paper, IconButton, Tooltip, TextField, Button } from '@mui/material';
-
-import { deepPurple, green, orange } from '@mui/material/colors'
+import { deepPurple, green, orange } from '@mui/material/colors';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import EditIcon from '@mui/icons-material/Edit'; 
+import DeleteIcon from '@mui/icons-material/Delete';
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -44,6 +47,7 @@ const Home = () => {
                                         <TableCell align='center' style={{color:'white',fontWeight:'bold',fontSize:16}}>No</TableCell>
                                         <TableCell align='center' style={{color:'white',fontWeight:'bold',fontSize:16}}>Name</TableCell>
                                         <TableCell align='center' style={{color:'white',fontWeight:'bold',fontSize:16}}>Email</TableCell>
+                                        <TableCell align='center' style={{color:'white',fontWeight:'bold',fontSize:16}}>Action</TableCell>
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
@@ -53,7 +57,13 @@ const Home = () => {
                                         <TableCell align='center'>munna@gmail.com</TableCell>
                                         <TableCell align='center'>
                                             <Tooltip title={'view'}>
-                                                <IconButton></IconButton>
+                                                <IconButton><Link to={'/view/1'}><VisibilityIcon color='primary' /></Link></IconButton>
+                                            </Tooltip>
+                                            <Tooltip title={'edit'}>
+                                                <IconButton><Link to={'/edit/1'}><EditIcon /></Link></IconButton>
+                                            </Tooltip>
+                                            <Tooltip title={"Delete"}>
+                                                <IconButton><DeleteIcon color={"secondary"} /></IconButton>
                                             </Tooltip>
                                         </TableCell>
                                     </TableRow>
