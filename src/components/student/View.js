@@ -1,7 +1,34 @@
 import { Typography, Box, TableContainer, Table, TableBody, TableCell, TableHead, TableRow, Paper, Button } from '@mui/material';
 import { orange } from '@mui/material/colors';
+import { useParams, useNavigate   } from 'react-router-dom';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 
 const View = () => {
+
+    const {id} = useParams()
+        console.log(id)
+    
+    const [student, setStudent] = useState([])
+    useEffect(()=>{
+        async function getStudentData(){
+            try{
+                const student = await axios.get(` http://localhost:3333/students/${id}`)
+                //console.log(student.data)
+                setStudent(student.data)
+            }
+            catch (error){
+                console.log("Some things wrong");
+            }
+        }
+        getStudentData();
+    }, [id])
+    
+    let navigate  = useNavigate ();
+
+    const handleClick = () => {
+        navigate("/")
+    }
     return (
         <>
             <Box textAlign={'center'} p={2} bgcolor={orange[400]}>
@@ -18,15 +45,15 @@ const View = () => {
                         </TableHead>
                         <TableBody>
                             <TableRow>
-                                <TableCell align={'center'}>1</TableCell>
-                                <TableCell align={'center'}>Munna</TableCell>
-                                <TableCell align={'center'}>munna@gmail.com</TableCell>
+                                <TableCell align={'center'}>{student.id}</TableCell>
+                                <TableCell align={'center'}>{student.stuname}</TableCell>
+                                <TableCell align={'center'}>{student.email}</TableCell>
                             </TableRow>
                         </TableBody>
                     </Table>
                 </TableContainer>
                 <Box m={3} textAlign={'center'}>
-                    <Button variant='contained' color='primary'>Back to Home</Button>
+                    <Button variant='contained' color='primary' onClick={handleClick}>Back to Home</Button>
                 </Box>
         </>
     );

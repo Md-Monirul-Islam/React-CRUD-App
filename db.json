@@ -1,9 +1,49 @@
 {
-    "students": [
-        { "id": 1, "stu_name": "Munna", "email": "munna@gmail.com" },
-        { "id": 2, "stu_name": "Monirul", "email": "monirul@gmail.com" },
-        { "id": 3, "stu_name": "Shakil", "email": "shakil@gmail.com" },
-        { "id": 4, "stu_name": "Abir", "email": "abir@gmail.com" },
-        { "id": 5, "stu_name": "Rahul", "email": "rahul@gmail.com" }
-      ]
+  "students": [
+    {
+      "id": 1,
+      "stuname": "Munna",
+      "email": "munna@gmail.com"
+    },
+    {
+      "id": 2,
+      "stuname": "Monirul",
+      "email": "monirul@gmail.com"
+    },
+    {
+      "id": 3,
+      "stuname": "Shakil",
+      "email": "shakil@gmail.com"
+    },
+    {
+      "id": 4,
+      "stuname": "Abir",
+      "email": "abir@gmail.com"
+    },
+    {
+      "id": 5,
+      "stuname": "Rahul",
+      "email": "rahul@gmail.com"
+    },
+    {
+      "stuname": "Shongkor",
+      "email": "shongkor@gmail.com",
+      "id": 6
+    },
+    {
+      "stuname": "Habib",
+      "email": "habib@gmail.com",
+      "id": 7
+    },
+    {
+      "stuname": "Rasel",
+      "email": "rasel@gmail.com",
+      "id": 8
+    },
+    {
+      "stuname": "Arnob",
+      "email": "arnob@gmail.com",
+      "id": 9
+    }
+  ]
 }
