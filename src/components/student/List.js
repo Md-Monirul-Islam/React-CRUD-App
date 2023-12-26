@@ -24,6 +24,14 @@ const List = () => {
         getAllStudent();
     },[])
 
+    const handleDelete = async id => {
+        await axios.delete(`http://localhost:3333/students/${id}`)
+        var newStudents = students.filter((item) => {
+            return item.id !== id;
+        })
+        setStudents(newStudents);
+    }
+
     
     return (
         <>
@@ -57,7 +65,7 @@ const List = () => {
                                                 <IconButton><Link to={`/edit/${student.id}`}><EditIcon /></Link></IconButton>
                                             </Tooltip>
                                             <Tooltip title={"Delete"}>
-                                                <IconButton><DeleteIcon color={"secondary"} /></IconButton>
+                                                <IconButton onClick={()=>handleDelete(student.id)}><DeleteIcon color={"secondary"} /></IconButton>
                                             </Tooltip>
                                         </TableCell>
                                     </TableRow>

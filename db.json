@@ -18,7 +18,7 @@
     {
       "id": 4,
       "stuname": "Abir",
-      "email": "abir@gmail.com"
+      "email": "mollaabir@gmail.com"
     },
     {
       "id": 5,
@@ -31,19 +31,9 @@
       "id": 6
     },
     {
-      "stuname": "Habib",
-      "email": "habib@gmail.com",
-      "id": 7
-    },
-    {
-      "stuname": "Rasel",
-      "email": "rasel@gmail.com",
-      "id": 8
-    },
-    {
       "stuname": "Arnob",
       "email": "arnob@gmail.com",
-      "id": 9
+      "id": 8
     }
   ]
 }
